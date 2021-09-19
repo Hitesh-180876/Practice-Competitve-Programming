@@ -1,6 +1,6 @@
 # implement of binary Search
 #
-
+# Hitesh Kumar Sharma 
 class Solution:
     ##Complete this function
     def searchInSorted(self,arr, N, K):

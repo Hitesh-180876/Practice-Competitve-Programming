@@ -1,4 +1,6 @@
 # Implemt of Linear Search in python
+#   Hitesh
+
 
 class Solution:
 

@@ -3,6 +3,8 @@
 
 import sys
 
+
+
 def merge(arr, l, m, r):
     i=0
     j=0
@@ -42,24 +44,25 @@ def mergeSort(arr,l,r):
         mergeSort(arr,mid+1,r)
         merge(arr,l,mid,r)
         
-        
-T = int(sys.stdin.readline().rstrip())
-
-for i in range(T):
-    N, M, P, Q = list(map(int, sys.stdin.readline().rstrip().split()))
-    
-    A = []
-    for i in range(N):
-        x = input().split()
-        A.append([x[0], int(x[1])])
-        
-    B = []
-    for i in range(N):
-        x = input().split()
-        B.append([x[0], int(x[1])])
-        
-    mergeSort(A,0,N-1)
-    mergeSort(B,0,M-1)
-    ans=A[:P]+B[:Q]
-    mergeSort(ans,0,P+Q-1)
+def PrintArr(ans, ans1):
     print(' '.join([i[0] for i in ans]))
+    
+        
+t=int(input())
+for _ in range(t):
+    n,m,p,q=list(map(int,input().split()))
+    first=[]
+    second=[]
+    for _ in range(n):
+        i=input().split()
+        first.append([i[0], int(i[1])])
+    for _ in range(m):
+        i=input().split()
+        second.append([i[0], int(i[1])])
+        
+        
+    mergeSort(first,0,n-1)
+    mergeSort(second,0,m-1)
+    ans=first[:p]+second[:q]
+    ans1 = mergeSort(ans,0,p+q-1)
+    PrintArr(ans, ans1)

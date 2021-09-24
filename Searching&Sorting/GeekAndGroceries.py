@@ -5,8 +5,6 @@
 
 import sys
 
-
-
 def merge(arr, l, m, r):
     i=0
     j=0
@@ -61,8 +59,7 @@ for _ in range(t):
     for _ in range(m):
         i=input().split()
         second.append([i[0], int(i[1])])
-        
-        
+             
     mergeSort(first,0,n-1)
     mergeSort(second,0,m-1)
     ans=first[:p]+second[:q]
